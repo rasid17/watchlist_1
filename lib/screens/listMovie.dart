@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:watchlist_1/database/db.dart';
 import 'package:watchlist_1/models/movie.dart';
 import 'package:watchlist_1/screens/editMovie.dart';
-import 'package:watchlist_1/screens/tambahMovie.dart';
 
 class WatchList extends StatefulWidget {
   const WatchList({super.key});

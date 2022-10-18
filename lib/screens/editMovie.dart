@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:watchlist_1/database/db.dart';
 import 'package:watchlist_1/models/movie.dart';
-import 'package:watchlist_1/screens/menu.dart';
 
 class EditMovie extends StatefulWidget {
   const EditMovie(
@@ -121,10 +120,7 @@ class _EditMovieState extends State<EditMovie> {
                   child: ElevatedButton(
                       onPressed: (() async {
                         await editMovie();
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: ((context) {
-                          return WatchListMenu();
-                        })));
+                        Navigator.pop(context);
                       }),
                       child: Text("Edit Movie")),
                 )

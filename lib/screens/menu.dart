@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:watchlist_1/screens/done.dart';
 import 'package:watchlist_1/screens/listMovie.dart';
 import 'package:watchlist_1/screens/tambahMovie.dart';
