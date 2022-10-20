@@ -13,7 +13,6 @@ class WatchList extends StatefulWidget {
 class _WatchListState extends State<WatchList> {
   DbHelper db = DbHelper();
   List<Movie> listMovie = [];
-  bool isSelected = false;
 
   initDatabase() async {
     await db.database();

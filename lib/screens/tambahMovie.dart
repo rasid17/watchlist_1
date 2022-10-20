@@ -94,17 +94,6 @@ class _TambahMovieState extends State<TambahMovie> {
                         )),
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.all(5),
-                  child: TextField(
-                    controller: done,
-                    decoration: InputDecoration(
-                        labelText: 'Status',
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        )),
-                  ),
-                ),
                 Container(
                   margin: EdgeInsets.all(10),
                   child: ElevatedButton(
