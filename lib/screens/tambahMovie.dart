@@ -98,8 +98,32 @@ class _TambahMovieState extends State<TambahMovie> {
                   margin: EdgeInsets.all(10),
                   child: ElevatedButton(
                       onPressed: (() async {
-                        await upMovie();
-                        Navigator.pop(context);
+                        if (judul!.text.isEmpty) {
+                          showDialogJudul(BuildContext context) {
+                            Widget ok = TextButton(
+                              child: Text("Ok"),
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                            );
+                            AlertDialog alertDialogKosong = AlertDialog(
+                              title: Text("PERINGATAN!"),
+                              content: Text("Judul masih kosong!"),
+                              actions: [ok],
+                            );
+                            showDialog(
+                                context: context,
+                                builder: ((context) {
+                                  return alertDialogKosong;
+                                }));
+                          }
+
+                          print("Alert Kosong");
+                          showDialogJudul(context);
+                        } else {
+                          await upMovie();
+                          Navigator.pop(context);
+                        }
                       }),
                       child: Text("Tambah Movie")),
                 )
